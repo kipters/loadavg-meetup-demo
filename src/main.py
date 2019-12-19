@@ -2,13 +2,14 @@ import sqlite3
 import redis
 import json
 from time import sleep
-from os import getloadavg
+from os import getloadavg, environ
 from atexit import register
 from socket import gethostname
 from datetime import datetime
 
 hn = gethostname()
 db = sqlite3.connect('avg.db')
+redisHost = environ['REDIS_HOST'] or 'localhost'
 r = redis.Redis('redis')
 
 def closeDb():
