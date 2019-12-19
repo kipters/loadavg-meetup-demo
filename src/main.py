@@ -1,5 +1,7 @@
 from time import sleep
+from os import getloadavg
 
 while True:
-    print ("Hello world")
-    sleep(2)
+    avg = getloadavg()
+    print ("Load avg 5s: " + str(avg[1]))
+    sleep(5)
