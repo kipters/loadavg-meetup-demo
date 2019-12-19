@@ -9,8 +9,8 @@ from datetime import datetime
 
 hn = gethostname()
 db = sqlite3.connect('avg.db')
-redisHost = environ['REDIS_HOST'] or 'localhost'
-r = redis.Redis('redis')
+redisHost = environ.get('REDIS_HOST', 'localhost')
+r = redis.Redis(redisHost)
 
 def closeDb():
     db.close()
