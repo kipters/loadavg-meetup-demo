@@ -1,3 +1,3 @@
 # LoadAvg Tool
 
-## My awesome tool for monitoring load average
+## Demo for my session at 2nd Python Meetup in Palermo
